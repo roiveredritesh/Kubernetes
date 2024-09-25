@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployement
+  labels:
+    app: my-deployement
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-deployement
+  template:
+    metadata:
+      labels:
+        app: my-deployement
+    spec:
+      containers:
+        - name: my-deployement
+          image: node:18.20.4-alpine
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 20
