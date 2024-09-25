@@ -8,7 +8,7 @@ https://github.com/dockersamples/example-voting-app
 
 ### Application Architecture Overview
 
-![Workflow](https://github.com/roiveredritesh/Kubernetes/edit/main/Kubernetes%20Application/Workflow_Diagram.webp)
+![Workflow](https://raw.githubusercontent.com/roiveredritesh/Kubernetes/refs/heads/main/Kubernetes%20Application/Workflow_Diagram.webp)
 
 #### Components
 
